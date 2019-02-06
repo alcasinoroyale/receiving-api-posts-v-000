@@ -6943,3 +6943,36 @@ Processing by PostsController#show as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "15"]]
   Rendered posts/show.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 108.5.59.237 at 2019-02-06 22:40:17 +0000
+Cannot render console from 108.5.59.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 262ms (Views: 242.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 108.5.59.237 at 2019-02-06 22:40:46 +0000
+Cannot render console from 108.5.59.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 108.5.59.237 at 2019-02-06 22:40:46 +0000
+Cannot render console from 108.5.59.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 108.5.59.237 at 2019-02-06 22:40:57 +0000
+Cannot render console from 108.5.59.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d8m59tHHcxW4OvcUiP5d3LL7x9pm6KTnL8tqqmYDeBLEDiUZfRM8pOVKL2DydCS8LYqh9ptCK1Rr9E/dUtzLyA==", "post"=>{"title"=>"Post 5", "description"=>"Post 5 Desc"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Post 5"], ["description", "Post 5 Desc"], ["created_at", "2019-02-06 22:40:57.181778"], ["updated_at", "2019-02-06 22:40:57.181778"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 201 Created in 69ms (Views: 19.7ms | ActiveRecord: 2.9ms)
